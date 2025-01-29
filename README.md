@@ -40,6 +40,11 @@ This specific extension allows for access to system level calls, in my example, 
 
 ** Need to genericize this a bit, sse scripts/run.js for an example of a test.
 
+
+After submitting your test, you should start to see results in the K6 UI!
+![alt text](image.png)
+![alt text](graph.png)
+
 #### Deployment Requirements
 
 * Functional kubernetes cluster
