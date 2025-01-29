@@ -8,6 +8,8 @@ WIP
 
 [This](https://github.com/grafana/xk6-exec) library gives the k6 environment access to operating system level built-ins, which is exactly what I needed!
 
+See an example of the test run here: https://seancoady.grafana.net/a/k6-app/runs/3872886?tab=checks 
+
 The following is necessary to run a custom k6 binary:
 
 * Build custom binary and container image
