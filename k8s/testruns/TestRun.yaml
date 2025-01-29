@@ -1,0 +1,13 @@
+apiVersion: k6.io/v1alpha1
+kind: TestRun
+metadata:
+  name: k6-sample-with-extensions
+spec:
+  parallelism: 1
+  script:
+    configMap:
+      name: test-script
+      file: run.js
+  arguments: "--vus 10 --duration 30s"
+  runner:
+    image: seancoady22/custom-xk6-exec:0.1.4-snapshot 

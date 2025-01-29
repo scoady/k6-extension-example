@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export version=$(cat ./VERSION)
+docker run --rm -it \
+  -v "${HOME}/.config/loadimpact/k6/config.json:/etc/scripts/config.json" \
+  -v "$(pwd)/scripts:/etc/scripts" \
+  seancoady22/custom-xk6-exec:0.1.5 run /etc/scripts/$1 -c "/etc/scripts/config.json"
+

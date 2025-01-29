@@ -1,0 +1,2 @@
+kubectl delete configmap test-script
+kubectl create configmap test-script --from-file= ../../scripts

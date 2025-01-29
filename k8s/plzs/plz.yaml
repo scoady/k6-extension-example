@@ -1,0 +1,11 @@
+apiVersion: k6.io/v1alpha1
+kind: PrivateLoadZone
+metadata:
+  name: scoady-plz
+spec:
+  token: grafana-k6-token
+  resources:
+    limits:
+      cpu: 256m
+      memory: 1024Mi
+  image: seancoady22/custom-xk6-exec:0.1.5

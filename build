@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export version=$(cat ./VERSION)
+export repository="seancoady22/custom-xk6-exec"
+export extra_tags="latest"
+
+docker build -t $repository:$version .
+docker tag $repository:$version $repository:$extra_tags
+docker push $repository:$version

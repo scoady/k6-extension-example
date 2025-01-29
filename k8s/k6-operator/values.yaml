@@ -1,0 +1,34 @@
+customAnnotations:
+
+customLabels:
+
+
+podLabels:
+
+
+podAnnotations:
+
+manager:
+  image:
+    tag: latest
+    pullPolicy: IfNotPresent
+  readinessProbe:
+    failureThreshold: 3
+    httpGet:
+      path: /readyz
+      port: 8081
+      scheme: HTTP
+    initialDelaySeconds: 20
+    periodSeconds: 5
+    successThreshold: 1
+    timeoutSeconds: 10
+  livenessProbe:
+    failureThreshold: 3
+    httpGet:
+      path: /healthz
+      port: 8081
+      scheme: HTTP
+    initialDelaySeconds: 20
+    periodSeconds: 5
+    successThreshold: 1
+    timeoutSeconds: 10
